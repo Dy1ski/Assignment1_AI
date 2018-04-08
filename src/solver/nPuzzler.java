@@ -82,6 +82,8 @@ class nPuzzler
 		lMethods = new SearchMethod[METHOD_COUNT];
 		lMethods[0] = new BFSStrategy();
 		lMethods[1] = new GreedyBestFirstStrategy();
+		lMethods[2] = new DepthFirstSearch();
+	//  	lMethods[3] = new Astar(); Implement this in the next few days
 	}
 	
 	private static nPuzzle readProblemFile(String fileName) // this allow only one puzzle to be specified in a problem file 
