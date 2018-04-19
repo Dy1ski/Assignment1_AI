@@ -38,7 +38,7 @@ class nPuzzler
 		for(int i = 0; i < METHOD_COUNT; i++)
 		{
 			//do they want this one?
-			if(lMethods[i].code.compareTo(method) == 0)
+			if(lMethods[i].code.toUpperCase().equals(method.toUpperCase()))
 			{
 				//yes, use this method.
 				thisMethod = lMethods[i];
@@ -83,7 +83,7 @@ class nPuzzler
 		lMethods[0] = new BFSStrategy();
 		lMethods[1] = new GreedyBestFirstStrategy();
 		lMethods[2] = new DepthFirstSearch();
-	  lMethods[3] = new Astar();
+	    lMethods[3] = new AStar();
 	}
 
 	private static nPuzzle readProblemFile(String fileName) // this allow only one puzzle to be specified in a problem file
